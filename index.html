@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>通用AI动手课 - Hands-on AI</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <div class="sidebar">
+            <div class="sidebar-header">
+                <h1>通用AI动手课<br>Hands-on AI</h1>
+            </div>
+            <div class="nav-list" id="navList"></div>
+        </div>
+        <div class="content" id="content">
+            <div id="mainContent" class="markdown-body"></div>
+        </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+    <script>
+const markdownContent = `# 通用AI动手课的动手环节
+亲爱的同学们，发挥你们的聪明才智、发挥你们的想象力，让我们Just do it！
+
+## 金币动手环节
+任务：
+
+1、用Gemini、GPT、豆包、元宝等各种大模型生成一张纪念金币的图片，用各种可能的模型尺寸尝试效果。效果最佳者和最差者有奖。
+
+2、将这个纪念币改成部门或家庭所用的纪念币。
+
+3、讲讲你的感受和收获。
+
+Prompt: 
+
+A high-resolution photograph of a gold coin featuring the TELSA logo at the center. The coin should have the year 2020 engraved at the top. Include finely detailed engravings, ornamental border patterns, and authentic coin textures like reeded edges, matte
+
+中文提示词：
+
+这张金币的高分辨率照片，中心饰有特斯拉（Tesla）标志。硬币顶部应刻有 2003年份。需包含精细的雕刻细节、装饰性边框图案，以及真实的硬币质感，如齿状边缘和哑光效果。
+
+![image1](imgs/image1.jpeg)
+
+## 宜家风格的卧室装修
+空房子来源：
+
+https://q7.itc.cn/images01/20250117/96a1d9ed448d4b44b663b34d3fac9aea.jpeg
+
+可以用这个空房子资源，也可以自己找，或者用AI生成一个空房子图像。
+
+把这个空房子摆上家具家电，请变为一个宜家风格的卧室。
+
+效果最佳者获奖
+
+![image3](imgs/image3.jpeg)
+
+## 制作穿越机视角酷炫AI视频
+上个视频的提示词如下：使用穿越机视角，图1为首帧，先从俯瞰视角迅速穿越到平视视角，在丛林中穿越，再从树林跳跃至水中，参考图2的视角。
+
+请参考上个视频的做法，完成下面的任务：
+
+1、两张图片（首帧和尾帧）
+
+![image4](imgs/image4.png)
+
+![image5](imgs/image5.png)
+
+2、根据上面的图片，完成一个穿越机视角的酷炫AI视频
+
+3、效果最佳者有奖
+
+## 马斯克太空AI的研究
+任务如下：
+
+1、最近网络上报道马斯克要建设太空AI，这个太酷了，怎么回事？
+
+2、请用AI去深入寻找这个问题的答案，尤其是其中的原理、困难和问题
+
+3、假设我们都是一群中学生，请你用易懂有趣的语言，和我们讲讲这个东西到底是怎么回事？
+
+4、分享你的感受和体会
+
+## 视频流萃取
+任务如下：
+
+1、请在网上搜索一段时间较长的视频（半小时到2小时之间），最好是youtube上的科技视频或产品发布会，比如Andrej Karpathy的视频或者华为产品的发布会
+
+2、我不想看那么久，请用AI去读视频，帮我总结要点
+
+3、更进一步，在视频出现PPT的时候，要有时间戳以及分析
+
+4、分享你的感受和体会
+
+可以用这个视频：https://www.youtube.com/watch?v=ww92ick66H0
+
+## Canvas动手：高层客户团队来华的策划
+任务如下：
+
+我是中国大公司在中东区域的一个主管。一个月后，我要带一个位于中东的大客户高管团队去中国进行商业拜访和沟通，行程为一周，大致安排如下：
+
+1、直飞北京，和工商银行总行的客户交流AI时代的企业数字化和智能化建设，和字节交流新媒体和传统业务的融合发展，在我司北京研究所参观展厅，进行数字化转型的专题交流。并参观故宫、长城、颐和园，欣赏中国京剧，吃北京烤鸭。共2天时间。
+
+2、然后全团通过高铁达到上海，参观我司上海园区，就智能化发展和算力先遣队进行深入交流。并参观上海外滩、豫园，体验南京路的繁华，浦江泛舟。共2天时间。
+
+3、之后，全团坐飞机到深圳总部，和公司高层领导进行战略对话，全面审视过去三年的合作成果，对未来合作进行深入沟通，同时举办战略伙伴的签约合作仪式。同时，参观腾讯公司就移动金融服务和未来可能的合作进行深入沟通，参观大疆公司，体验先进的无人机技术。共2天。
+
+4、最后团队抵达香港，安排太平山顶、维多利亚港游览，泛舟香江，体验最后的休闲时光，然后回程。1天时间。
+
+这是一次极为重要的访问。
+
+我们排出了初步计划，请你进一步细化这个计划。
+
+关于上述的商业拜访和交流活动是基本明确的，只能小幅度调整，但休闲旅游活动是可以调整的，你有更好的推荐的话，也可以提出好的建议。
+
+## Notebook动手：深入研究和高质量展现
+任务如下：
+
+1、利用Notebook的Deep Research功能，研究：选取2019-2025年，收集华为公司在收入、利润、研发投入、产业分布、全球区域分布等关键数据并予以分析，并结合期间的重大事件，得到关键结论。
+
+2、写好定制提示词，完成一份胶片、一个信息图和视频概览
+
+3、在对话框中持续对话，持续学习，生成一份面向特定场景的演讲文稿
+
+4、后续请继续探索播客、思维导图、测试等各种功能
+
+5、谈谈你的感受和体会
+
+## 用Notebook和Gamma生成PPT
+任务如下：
+
+1、在前面的Deep Research环节，我们对华为公司过去七年的表现做了深入分析
+
+2、在此基础上，利用Notebook和Gamma完成AI生成PPT胶片，并下载
+
+3、效果如何，谈谈你的感受
+
+## WorkBuddy初体验
+
+一次性输入以下六个任务：
+
+1、请采集当前中国市场的主流手机厂商（销量前五）的官网上在售的产品、价格、卖点，进行分析，整理成Excel文件。*（可选择汽车、折叠手机、空调、耳机、冰箱、笔记本电脑等产品）*
+
+2、我的C盘容量告警，请分析并给出可行的建议
+
+3、AI Coding：我是一名华为员工，想知道自己在华为工作了多少天，请做个网页程序。输入是加入华为的年月日，输出是在华为工作总天数。*（可根据实际情况修改）*
+
+4、"深度研究"：选取2019-2025年，收集华为公司在收入、利润、研发投入、产业分布、全球区域分布等关键数据并予以分析，并结合期间的重大事件，得到关键结论。*（可根据自己实际需求改）*
+
+5、（接续上个任务）根据刚才的深度分析，请完成—份高质量PPT，读者对象是商学院的学员们。
+
+6、请提供一个网上投票系统，让大家选择自己最喜欢的美女：1、张柏芝 2、杨幂 3、王祖贤 4、张曼玉 5、林青霞。投票网址请做成一个二维码，我好发群里。*（可根据自己需求改）*
+
+## MCP体验
+连接QQ邮箱，并对邮件进行挖掘：请分析最近一周我的邮件，有哪些关键事情需要关注
+
+## Skill体验：腾讯地图助手
+
+1、"腾讯地图助手" --- 明天苏州一日游安排：独墅湖泛舟，寒山寺看钟，虎丘探古。我住在山塘街，自驾。尽可能想周到。艺术化的HTML输出。*（可根据自己实际需求改）*
+
+2、"腾讯地图助手" --- 我后天下午要去深圳南山区办事，要去三个地点，蛇口时代广场、世界之窗、深圳湾体育运动中心。每个地方大致要花半个小时办事。14点从深圳北站出发，最后回到深圳北站。地点先后次序不重要，交通工具不限制，请妥善安排。*（可根据自己实际需求改）*
+
+## 专家体验：公文/汇报精修专家（职场硬通货）
+
+1、公文与材料写作专家 --- 原文："项目做完了，但算力费用超了快30万，确实因为我们组预估不准。很多任务是临时加，优先级还很高，叠加赶工期，GPU采购量超标"，请完成一份给领导的公文，目标是从大家关注的费用超标问题，转为我们很辛苦，给公司做了很多事，创造了很大价值，费用超支是事出有因。
+
+2、公文与材料写作专家 --- 我有一份通告，涉及全员："通报一下，最近发现很多人报销发票乱七八糟，有的连抬头都开错了，还有拖了两三个月才报。财务查起来都烦死了。以后必须当月报，发票抬头错了一律不报，大家都要关注。"，请协助完成一份高质量的公文
+
+3、公文与材料写作专家 --- 写一份年终汇报，主要素材："我今年主要负责数据报表，一共帮业务部门跑了大概500次数据，回复了业务群里1000多个问题，平时系统有报错我都及时看了，能处理都及时处理了，基本没出过大漏子"。
+
+## 综合练习：从美女投票到紧急订餐
+
+接着上面的"美女投票"任务：
+
+Step 1：为什么花了这么长的时间，请分析。并思考以后类似的工作，如何能加速？
+
+Step 2：再跑一个案例，看看需要多长时间。请提供一个网上投票系统，让大家选择自己最喜欢的科研新星：1、Arial 2、Kavin 3、Mars 4、Zermatt 5、Cao。投票网址请做成一个二维码，我好发群里。
+
+Step 3：基于上面的工作，我想做一个通用的网上投票的skill。需求如下：
+1）这是一个通用的用于生成网上投票的skill
+2）客户输入相关投票需求后，由系统生成一个用于此次投票的网址，并给出二维码。投票时客户投票时必须输入自己的名字。
+3）另外，给出一个管理者的界面，不用设置密码，但要给个特殊的链接。管理者界面可以设置一些参数，比如截止时间、重新启动投票、是否允许重复投票，是否允许多选等，同时当然也可以看到当前的投票统计结果。管理界面还要有个功能，就是给出一段提示词，让小龙虾类的应用（比如workbuddy手机的云端版本）可以自动去监控投票情况，自动通知。如何提醒让自动通知生效，请客户自己去定条件。这个功能默认不启动，处于折叠状态，客户打开后，才会生效，才会生成小龙虾提示词。
+4）因为这种网上投票一般都是临时需求，所以对速度要求严苛，请根据情况自动优化，确保速度快、质量好。我的需求大致如上，如果你有不清楚的地方先问我。不要急着去做skill。
+
+Step 4：我们的会议延期了，要给与会者紧急订午餐，我有个菜单见图，我要做个网上调查的链接，做成二维码发给大家，让大家选，10分钟后截止。系统自动统计大家的选择，我好去供应商订餐。
+
+![菜单](imgs/menu.jpg)
+
+Step 5：请分析这一轮所花的时间，哪里还能改进？
+
+Step 6：再跑一个案例，看看需要多长时间。请提供一个网上投票系统，让大家选择自己喜欢的公司：1、华为 2、三星 3、苹果 4、英伟达 5、台积电。投票网址请做成一个二维码，我好发群里。
+
+Step 7：请总结一下整个工作的过程，有哪些经验和教训。做好一个skill的关键是什么？
+
+Step 8：将整个过程做个完整的复盘，形成一个HTML文件
+
+`;
+
+document.addEventListener('DOMContentLoaded', function() {
+    const contentEl = document.getElementById('mainContent');
+    const navListEl = document.getElementById('navList');
+
+    marked.setOptions({
+        breaks: true,
+        gfm: true
+    });
+    contentEl.innerHTML = marked.parse(markdownContent);
+
+    const images = contentEl.querySelectorAll('img');
+    images.forEach((img, index) => {
+        const src = img.getAttribute('src') || '';
+        if (src.includes('menu.jpg')) {
+            img.style.width = '50%';
+            img.style.height = 'auto';
+        } else if ((index === 2 || index === 3)) {
+            img.style.width = '100%';
+            img.style.maxWidth = '600px';
+            img.style.height = 'auto';
+        }
+    });
+
+    const headings = contentEl.querySelectorAll('h2');
+    const navItems = [];
+
+    headings.forEach((heading, index) => {
+        const id = 'section-' + index;
+        heading.id = id;
+        const originalText = heading.textContent;
+        heading.innerHTML = '<span style="margin-right: 8px; font-weight: bold;">' + (index + 1) + '.</span>' + originalText;
+
+        const navItem = document.createElement('a');
+        navItem.className = 'nav-item';
+        navItem.textContent = (index + 1) + '. ' + originalText;
+        navItem.dataset.target = id;
+        navItem.addEventListener('click', function(e) {
+            e.preventDefault();
+            const target = document.getElementById(id);
+            if (target) {
+                target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+            }
+        });
+
+        navListEl.appendChild(navItem);
+        navItems.push({ el: navItem, target: heading });
+    });
+
+    const contentContainer = document.querySelector('.content');
+
+    function updateActiveNav() {
+        const scrollTop = contentContainer.scrollTop;
+        const containerHeight = contentContainer.clientHeight;
+        const scrollBottom = scrollTop + containerHeight;
+        const contentHeight = contentEl.offsetHeight;
+
+        let activeIndex = -1;
+
+        for (let i = navItems.length - 1; i >= 0; i--) {
+            const heading = navItems[i].target;
+            const rect = heading.getBoundingClientRect();
+            const contentRect = contentContainer.getBoundingClientRect();
+            const relativeTop = rect.top - contentRect.top + scrollTop;
+
+            if (relativeTop <= scrollTop + 100) {
+                activeIndex = i;
+                break;
+            }
+        }
+
+        if (scrollTop + containerHeight >= contentHeight - 50) {
+            activeIndex = navItems.length - 1;
+        }
+
+        navItems.forEach((item, index) => {
+            if (index === activeIndex) {
+                item.el.classList.add('active');
+            } else {
+                item.el.classList.remove('active');
+            }
+        });
+    }
+
+    contentContainer.addEventListener('scroll', updateActiveNav);
+    updateActiveNav();
+});
+    </script>
+</body>
+</html>
